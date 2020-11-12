@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace WhatDay
 {
     enum MonthName
@@ -29,127 +30,128 @@ namespace WhatDay
             string line = Console.ReadLine();
             int dayNum = int.Parse(line);
             int monthNum = 0;
-            //foreach (int daysInMonth in DaysInMonths)
-            //{
-            //    if (dayNum <= daysInMonth)
-            //    {
-            //        break;
-            //    }
-            //    else 
-            //    {
-            //        dayNum -= daysInMonth;
-            //        monthNum++;
-            //    }
-            //}
-            if (dayNum <= 31)
-            { // January
-                goto End;
-            }
-            else
+            var DaysInMonths = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            foreach (int daysInMonth in DaysInMonths)
             {
-                dayNum -= 31;
-                monthNum++;
+                if (dayNum <= daysInMonth)
+                {
+                    break;
+                }
+                else
+                {
+                    dayNum -= daysInMonth;
+                    monthNum++;
+                }
             }
-            if (dayNum <= 28)
-            { // February 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 28;
-                monthNum++;
-            }
-            if (dayNum <= 31)
-            { // March 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 31;
-                monthNum++;
-            }
-            if (dayNum <= 30)
-            { // April 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 30;
-                monthNum++;
-            }
-            if (dayNum <= 31)
-            { // May 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 31;
-                monthNum++;
-            }
-            if (dayNum <= 30)
-            { // June 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 30;
-                monthNum++;
-            }
-            if (dayNum <= 31)
-            { // July 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 31;
-                monthNum++;
-            }
-            if (dayNum <= 31)
-            { // August 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 31;
-                monthNum++;
-            }
-            if (dayNum <= 30)
-            { // September 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 30;
-                monthNum++;
-            }
-            if (dayNum <= 31)
-            { // October 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 31;
-                monthNum++;
-            }
-            if (dayNum <= 30)
-            { // November 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 30;
-                monthNum++;
-            }
-            if (dayNum <= 31)
-            { // December 
-                goto End;
-            }
-            else
-            {
-                dayNum -= 31;
-                monthNum++;
-            }
-        End:
+        //    if (dayNum <= 31)
+        //    { // January
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 31;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 28)
+        //    { // February 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 28;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 31)
+        //    { // March 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 31;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 30)
+        //    { // April 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 30;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 31)
+        //    { // May 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 31;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 30)
+        //    { // June 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 30;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 31)
+        //    { // July 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 31;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 31)
+        //    { // August 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 31;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 30)
+        //    { // September 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 30;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 31)
+        //    { // October 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 31;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 30)
+        //    { // November 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 30;
+        //        monthNum++;
+        //    }
+        //    if (dayNum <= 31)
+        //    { // December 
+        //        goto End;
+        //    }
+        //    else
+        //    {
+        //        dayNum -= 31;
+        //        monthNum++;
+        //    }
+        //End:
             MonthName temp = (MonthName)monthNum;
             string monthName = temp.ToString();
             // string monthName;
